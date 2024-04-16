@@ -10,23 +10,29 @@ using namespace std;
 
 int main(){
 
-    cout << "Bem vindo a Calculadora da Função Horária da Posição" << endl;
+    cout << "Bem vindo a Calculadora de Função Horária da Posição" << endl;
 
-    cout << "Para começarmos insira ..." << endl;
+    cout << endl << "Para começarmos insira ..." << endl;
 
-    float posiObject;
-    cout << "Posição Inicial: ";
-    cin >> posiObject;
-
-    float ;
-    cout << "";
+    float posicaoInicial;
+    cout << endl << "Posição Inicial: ";
+    cin >> posicaoInicial;
 
     float velocidadeInicial;
+    cout << "Velocidade Inicial: ";
+    cin >> velocidadeInicial;
+
     float aceleracao;
-
-
-
+    cout << "Aceleração: ";
+    cin >> aceleracao;
     
+    float tempo;
+    cout << "Tempo: ";
+    cin >> tempo;
+
+    float posicaoFinal = posicaoInicial + (velocidadeInicial * tempo) + ((aceleracao * (tempo * tempo)) / 2);
+    
+    cout << endl << "A posição final do objeto após " << tempo << " segundos é de " << posicaoFinal << " metros da posição inicial." << endl;
 
     return 0;
 }
