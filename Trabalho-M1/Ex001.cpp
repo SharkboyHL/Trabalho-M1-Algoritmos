@@ -10,28 +10,32 @@ using namespace std;
 
 int main(){
 
+    // Introdução ao programa:
     cout << "Bem vindo a Calculadora de Função Horária da Posição" << endl;
 
     cout << endl << "Para começarmos insira ..." << endl;
 
+    // Entradas dos valores:
     float posicaoInicial;
-    cout << endl << "Posição Inicial: ";
-    cin >> posicaoInicial;
+    cout << endl << "Posição Inicial (em metros): ";
+    cin >> posicaoInicial ;
 
     float velocidadeInicial;
-    cout << "Velocidade Inicial: ";
+    cout << "Velocidade Inicial (em m/s): ";
     cin >> velocidadeInicial;
 
     float aceleracao;
-    cout << "Aceleração: ";
+    cout << "Aceleração (em m/s²): ";
     cin >> aceleracao;
     
     float tempo;
-    cout << "Tempo: ";
+    cout << "Tempo (em segundos): ";
     cin >> tempo;
 
+    // Cálculo da Equação Horária da Posição (MRUV):
     float posicaoFinal = posicaoInicial + (velocidadeInicial * tempo) + ((aceleracao * (tempo * tempo)) / 2);
     
+    // Saída dos valores:
     cout << endl << "A posição final do objeto após " << tempo << " segundos é de " << posicaoFinal << " metros da posição inicial." << endl;
 
     return 0;
