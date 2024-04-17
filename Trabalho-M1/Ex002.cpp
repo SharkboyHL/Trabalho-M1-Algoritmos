@@ -29,6 +29,7 @@ int main(){
     cout << "3 - Processador AMD Ryzen 7: R$1658,90" << endl;
     cout << "4 - Monitor Gamer LG: R$999,99" << endl;
     cout << "5 - Cadeira Gamer Kabum: R$739,90" << endl;
+    cout << "6 - Insira um produto" << endl;
 
     float precoPlaystation = 3999.90;
     float precoNotebook = 4899.99;
@@ -52,9 +53,11 @@ int main(){
         precoCompra = precoMonitor;
     }else if(codigoProduto == 5){
         precoCompra = precoCadeira;
+    }else if(codigoProduto == 6){
+        cout << "Insira o valor do produto: R$";
+        cin >> precoCompra;
     }else{
         cout << endl << "PRODUTO INVÁLIDO !" << endl;
-        
         return 0;
     }
 
@@ -75,7 +78,7 @@ int main(){
         cout << endl <<"Valor total da compra: R$" << precoCompra << endl;
     }else if(codigo == 3){
         precoCompra = precoCompra / 2;
-        cout << endl << "Valor em 2X de R$" << precoCompra << endl;
+        cout << endl << "Valor total da compra: R$" << (precoCompra * 2) << " feita em 2X de R$" << precoCompra << endl;
     }else if(codigo == 4){
         int parcelas;
         cout << "Em quantas vezes deseja parcelar ?" << endl;
