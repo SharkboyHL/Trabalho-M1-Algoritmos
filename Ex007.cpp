@@ -10,8 +10,8 @@ int main(){
 
     cout << "Insira os angulos internos do triângulo..." << endl;
     cout << "- Para ser acutângulo precisa que todos os ângulos sejam agudos ou seja menores que 90º." << endl;
-    cout << "- Para ser retângulo precisa que 1 ângulo seja reto ou seja que tenha 90º e o restante menores que 90º" << endl;
-    cout << "- Para ser escaleno precisa que todos os lados tenham medidas diferentes." << endl;
+    cout << "- Para ser retângulo precisa que 1 ângulo seja reto ou seja que tenha 90º e o restante menores que 90º." << endl;
+    cout << "- Para ser obtusângulo precisa que 1 ângulo seja obtuso ou seja maior que 90º e o restante menores que 90º." << endl;
 
 
     float anguloA, anguloB, anguloC;
