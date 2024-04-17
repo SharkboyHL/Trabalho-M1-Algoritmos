@@ -81,19 +81,20 @@ int main(){
         cout << endl << "Valor total da compra: R$" << (precoCompra * 2) << " feita em 2X de R$" << precoCompra << endl;
     }else if(codigo == 4){
         int parcelas;
+        
         cout << "Em quantas vezes deseja parcelar ?" << endl;
         cout << "Parcelas: ";
         cin >> parcelas;
 
         if (parcelas >= 3){
             float juros = precoCompra * 0.10;
+
             precoCompra = (precoCompra / parcelas) + juros;
             cout << endl << "Valor total da compra: R$" << (precoCompra * parcelas)  << " feita em " << parcelas << "X de R$" << precoCompra << endl;    
         }else{
             cout << endl << "FORMA DE PAGAMENTO INVÁLIDA !" << endl;
             return 0;
         }
-         
     }else{
         cout << "FORMA DE PAGAMENTO INVÁLIDA !" << endl;
     }
