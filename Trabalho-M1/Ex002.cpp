@@ -21,7 +21,7 @@ int main(){
 
     cout << "Bem vindo a Kabum !" << endl;
 
-    cout << endl << "Insira qual produto deseja comprar e insira seu código..." << endl;
+    cout << endl << "Insira qual produto deseja precoComprar e insira seu código..." << endl;
 
     cout << endl << "TABELA DE PREÇOS:" << endl;
     cout << "1 - Playstation 5: R$3999,90" << endl;
@@ -36,21 +36,26 @@ int main(){
     float precoMonitor = 999.99;
     float precoCadeira = 739.90;
 
-    int produto;
-    float compra;
+    int codigoProduto;
+    cout << endl << "Insira o código do produto que deseja comprar: ";
+    cin >> codigoProduto;
 
-    if (produto == 1){
-        compra = precoPlaystation;
-    }else if(produto == 2){
-        compra = precoNotebook;
-    }else if(produto == 3){
-        compra = precoProcessador;
-    }else if(produto == 4){
-        compra = precoMonitor;
-    }else if(produto == 5){
-        compra = precoCadeira;
+    float precoCompra;
+
+    if(codigoProduto == 1){
+        precoCompra = precoPlaystation;
+    }else if(codigoProduto == 2){
+        precoCompra = precoNotebook;
+    }else if(codigoProduto == 3){
+        precoCompra = precoProcessador;
+    }else if(codigoProduto == 4){
+        precoCompra = precoMonitor;
+    }else if(codigoProduto == 5){
+        precoCompra = precoCadeira;
     }else{
-        cout << "PRODUTO INVÁLIDO !";
+        cout << endl << "PRODUTO INVÁLIDO !" << endl;
+        
+        return 0;
     }
 
     int codigo;
@@ -62,27 +67,32 @@ int main(){
     cout << endl << "INSIRA O CÓDIGO: ";
     cin >> codigo;
 
-    if(produto == 1 || produto == 2 || produto == 3 || produto == 4 || produto == 5 && codigo == 1){
-        compra = compra - (compra * 0.10);
-        cout << "Valor total da compra: R$" << compra << endl;
+    if(codigo == 1){
+        precoCompra = precoCompra - (precoCompra * 0.10);
+        cout << endl << "Valor total da compra: R$" << precoCompra << endl;
     }else if(codigo == 2){
-        compra = compra - (compra * 0.15);
-        cout << "Valor total da compra: R$" << compra << endl;
+        precoCompra = precoCompra - (precoCompra * 0.15);
+        cout << endl <<"Valor total da compra: R$" << precoCompra << endl;
     }else if(codigo == 3){
-        compra = compra / 2;
-        cout << "Valor em 2X de R$" << compra;
+        precoCompra = precoCompra / 2;
+        cout << endl << "Valor em 2X de R$" << precoCompra << endl;
     }else if(codigo == 4){
         int parcelas;
         cout << "Em quantas vezes deseja parcelar ?" << endl;
         cout << "Parcelas: ";
         cin >> parcelas;
 
-        float juros = compra * 0.10;
-        compra = (compra / parcelas) + juros;
-        cout << "Valor em " << parcelas << "X de R$" << compra; 
+        if (parcelas >= 3){
+            float juros = precoCompra * 0.10;
+            precoCompra = (precoCompra / parcelas) + juros;
+            cout << endl << "Valor total da compra: R$" << (precoCompra * parcelas)  << " feita em " << parcelas << "X de R$" << precoCompra << endl;    
+        }else{
+            cout << endl << "FORMA DE PAGAMENTO INVÁLIDA !" << endl;
+            return 0;
+        }
+         
     }else{
         cout << "FORMA DE PAGAMENTO INVÁLIDA !" << endl;
     }
-
     return 0;
 }
