@@ -12,7 +12,7 @@ int main(){
 
     int a, b, c;
 
-    cout << "Insira o valor de A: ";
+    cout << endl << "Insira o valor de A: ";
     cin >> a;
 
     cout << "Insira o valor de B: ";
@@ -21,11 +21,19 @@ int main(){
     cout << "Insira o valor de C: ";
     cin >> c;
 
-    float delta = (b * b) - 4 * a * c;
+    if(a != 0 && b != 0 && c != 0){
 
-    float bhaskara = -b + (delta / delta) / 2 * a; 
+        float delta = (b * b) - 4 * a * c;
 
-    cout << bhaskara << endl;
-
+        if(delta > 0){
+            cout << endl << "A equação de segundo grau possuí duas raízes reais e distintas !" << endl;
+        }else if(delta == 0){
+            cout << endl << "A equação de segundo grau possuí apenas uma raíz real !" << endl;
+        }else{
+            cout << endl << "A equação de segundo grau possuí raízes complexas !" << endl;
+        }
+    }else{
+        cout << endl << "VALORES INSERIDOS INVÁLIDOS !" << endl;
+    }
     return 0;
 }
