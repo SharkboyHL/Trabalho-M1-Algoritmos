@@ -20,7 +20,6 @@ int main(){
     int pratoB = 1500;
     int pratoC = 600;
 
-    string escolha;
     cout << "Quais convidados irão comparecer na festa ?" << endl;
     
     cout << endl << "TABELA DE CONVIDADOS:" << endl;
